@@ -1,0 +1,14 @@
+[
+{
+    "title"   : "Comprehensive Plan A",
+    "detail"  : "Plan A offers medical coverage and emergency services to individuals and families travelling outside their Home Countries."
+},
+{
+    "title" : "Comprehensive Plan B",
+    "detail" : "Plan B offers medical coverage and emergency services to individuals and families travelling outside their Home Countries.The plan pays 75% of eligible exprenses to the selectes Medical Maximum."
+},
+{
+    "title" : "Comprehensive Plan C",
+    "detail": "Plan-C offers medical coverage and emergency servies to individuals and families traveeling outide their Home Countries."
+}
+]

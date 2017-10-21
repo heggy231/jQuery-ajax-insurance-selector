@@ -1,0 +1,194 @@
+/* CSS for the main page */
+
+.master {
+    font-weight: bold ;
+    font-size: 1em;
+}
+.detail {
+    font-size: 0.85em;
+}
+.frame {
+    width: 600px;
+    height: 450px;
+    border: 1px solid;
+    margin: 70px auto 70px auto;
+    background-color: aliceblue;
+}
+.header {
+    font-size: 150%;
+    font-family:verdana;
+    font-weight:bold;
+    background-color: lightblue;
+    padding:20px 10px;
+}
+.screenBody {
+    text-align: justify;
+    font-family: Arial;
+    padding: 5px;
+    border-style: solid;
+    border-color: #C2E0FF;
+    border-radius: 1.5%;
+    margin: 20px auto 20px auto;
+    width: 33em;
+    height: 10em;
+    box-sizing: border-box;
+}
+.selectButton{
+    color: darkblue;
+    background-color: #fff;
+    font-size: 16px;
+    font-weight: normal;
+    text-align: center;
+    width:5em;
+    height:2em;
+    border: 1px solid #4c88bc;
+    border-radius: 4px;
+    margin-right: 1.1em;
+    margin-bottom: 1.1em;
+    margin-top:.5em;
+    float: right;
+}
+
+#navBar {
+    margin-left: auto;
+    margin-right:auto;
+}
+/*CSS for Limited plan page */
+
+.limitedFrame {
+    width: 520px;
+    height: 455px;
+    border: 1px solid;
+    margin: 70px auto 70px auto;
+    background-color: #fff;
+}
+.limitedHeader {
+    font-size: 150%;
+    font-family:verdana;
+    font-weight:bold;
+    background-color: gainsboro;
+    padding:10px 10px;
+    margin-bottom:50px;
+}
+.limitedIcon{
+    float:left;
+    border:1px solid;
+    margin-right: 40px;
+    margin-left:40px;
+    height:5em;
+    width:7em;
+    padding: 0 5px;
+    border-radius: 4px;
+    text-align: center;
+    line-height:70px;
+    background-color: lightsalmon;
+}
+.limitedBody {
+    padding-right:15px;
+    text-align: justify;
+    font-family: Arial;
+
+}
+.limitedBorder {
+    background-color: #E6FFFA;
+    width:520px;
+    height:3em;
+    margin-bottom:50px;
+}
+
+/*CSS for Comprehensive plan page */
+
+.compFrame {
+    width: 520px;
+    height: 570px;
+    border: 1px solid;
+    margin: 70px auto 70px auto;
+    background-color: #fff;
+}
+.compHeader {
+    font-size: 150%;
+    font-family:verdana;
+    font-weight:bold;
+    background-color: gainsboro;
+    padding:10px 10px;
+    margin-bottom:25px;
+}
+.compIcon{
+    float:left;
+    border:1px solid;
+    margin-left:30px;
+    height:4em;
+    width:9em;
+    padding:5px;
+    border-radius: 4px;
+    text-align: center;
+    background-color: #ADD6FF;
+    color:#fff;
+    font-size: 16px;
+    font-weight: normal;
+}
+.compBody {
+    padding-right:10px;
+    padding-left:200px;
+    text-align: left;
+    font-family: Arial;
+
+}
+.compBorder {
+    background-color: #E6FFFA;
+    width:520px;
+    height:3em;
+    margin-bottom:25px;
+}
+
+/*Css for Personal details page */
+
+.detailsFrame{
+    width: 600px;
+    height: 450px;
+    border: 1px solid;
+    margin: 70px auto 70px auto;
+    background-color: #fff;
+}
+.detailsBody {
+    border: 1px solid #999;
+    margin:30px 30px 20px 30px;
+    height:270px;
+    width:480px;
+    border-radius: 8px;
+}
+.detailsHeader{
+    margin-bottom:10px;
+    font-family:verdana;
+    background-color: #E0F0FF;
+    padding-top:10px;
+    padding-bottom:5px;
+    border-top-right-radius: 8px;
+    border-top-left-radius: 8px;
+}
+
+.details{
+    padding-left:20px;
+    text-align:justify;
+}
+label{
+    text-align: right;
+    float: left;
+    clear: left;
+    width:120px;
+}
+input {
+    float:left;
+}
+
+/*CSS styling for Confirmation page */
+
+.contentBody {
+    padding-left:35px;
+    padding-top:20px;
+    font-size:1em;
+    font-family: Arial;
+}
+.contentBody li {
+    padding-left: 55px;
+}

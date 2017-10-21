@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel ="stylesheet"  href="TravelInsurance.css" type="text/css" media="screen">
+</head>
+<body>
+<div id="navBar">
+    <a class="link1" href="#plansScreen">Plans</a>
+    <a class="link2" href="#limitedCoverageScreen"> > Limited Coverage</a>
+    <a class="link3" href="#comprehensiveCoverageScreen"> > Comprehensive Coverage</a>
+    <a class="link4" href="#personalDetailsScreen"> > Personal Details</a>
+    <a class="link5" href="#confirmationScreen"> > Confirmation</a>
+</div>
+
+<div id="container"></div>
+
+<!--    <div class="header"></div>
+    <div class="screenBody">
+        <div class="master"></div>
+        <div class="detail"></div>
+        <button class="submit"></button>
+    </div>
+
+-->
+<!-- <div class="limitedFrame">
+<div class="limitedHeader">Limited Plans</div>
+<div class="limitedIcon">Limited Plan A</div>
+<div class="master">Limited Plan A</div>
+<div class="detail">This is ane example</div>
+</div>
+-->
+
+<!-- <div class="detailsFrame">
+    <div class="header">Personal Details</div>
+    <div class="detailsBody">
+    <div class="detailsHeader">Insured#1</div>
+</div>
+
+    <button class="selectButton" style=" margin-right: 180px; float:right">Submit</button>
+    <a style="margin-left:30px;" href="#">+Add more insured</a>
+</div>
+-->
+
+</body>
+
+
+<link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+<script type="text/javascript" src="jquery-1.11.1.min.js"></script>
+<script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+<script type="text/javascript">
+
+    // //Set the necessary variables
+
+    // var index = 1;
+    // var maxnumber = 5;
+    // var nameList = [];
+    // var plan;
+    // $('#navBar a').hide();
+
+    // //Check if the browser supports onhashchange event
+
+    // if ("onhashchange" in window) {
+    //     $(window).on('hashchange',hashChange).trigger('hashchange');
+    // }
+    // else{
+    //     var lastHash='';
+    //     setInterval(function(){
+    //         if (lastHash!=location.hash)
+    //             hashChange();
+    //         lastHash=location.hash;
+    //     },100)
+    // }
+
+    // //Load the main page
+
+    // loadmain();
+
+    // //Load page based on the hash changes in the url
+
+    // function hashChange(){
+    //     var page=location.hash.slice(1);
+    //     switch (page) {
+    //         case ("plansScreen"):
+    //             loadmain();
+    //             break;
+    //         case ("limitedCoverageScreen"):
+    //             loadlimited();
+    //             break;
+    //         case ("comprehensiveCoverageScreen"):
+    //             loadcomprehensive();
+    //             break;
+    //         case ("personalDetailsScreen"):
+    //             loadpersonal();
+    //             break;
+    //         case ("confirmationScreen"):
+    //             loadconfirmation();
+    //             break;
+    //     }
+    // }
+
+    // //Load Limited Plan options on pressing the Select button in tha main page
+
+    // $(document).on('click', 'button[name="limited"]', function() {
+    //     loadlimited();
+    // });
+
+
+    // //Load Comprehensive plan options on pressing the Select button in tha main page
+
+    // $(document).on('click', 'button[name="comp"]', function() {
+    //     loadcomprehensive();
+    // });
+
+    // //Load the Personal details page on selecting the plan
+
+    // $(document).on('click', 'button[name="plan"] ', function() {
+    //     planName = $(this).attr('id');
+    //     plan = planName.split(" ");
+    //     loadpersonal();
+    // });
+
+    // //Load the personal details form on clicking the Add link
+
+    // $(document).on('click','a',function() {
+    //     var returnflag = validate();
+    //     addForm(returnflag);
+    // });
+
+    // //Load the confimation page once the user presses submit
+
+    // $(document).on('click','#selectButton',function() {
+    //     loadconfirmation();
+    // });
+
+    // //Function to load main page
+
+    // function loadmain() {
+    //     $('#container').removeClass();
+    //     $.ajax({
+    //         url: "main.txt",
+    //         dataType: "json",
+    //         success: function (data) {
+    //         var $content = '<div class="header">Available Plans</div>';
+    //         $(data).each(function (index) {
+    //             $content += '<div class="screenBody"><div class="master">' + this.title + '</div>';
+    //             $content += '<div class="detail"><p>' + this.detail + '</p></div>';
+    //             $content += '<button class="selectButton" name="' + this.value + '">Select</button></div>';
+    //         });
+    //         $('#container').html($content).addClass('frame');
+    //             $('#navBar a').hide();
+    //         $("a[href='#plansScreen']").show();
+    //         location.hash = 'plansScreen';
+    //     },
+    //     error: function () {
+    //         alert('Could not load content!');
+    //     }
+    // });
+    // }
+
+    // //Function that loads limited plan content
+
+    // function loadlimited() {
+    //     $('#container').removeClass('detailsFrame');
+    //     $.ajax({url      : "limited.txt",
+    //         dataType : "json",
+    //         success : function(data){
+    //         var $content = '<div class="limitedHeader">Limited Coverage</div>';
+    //         $(data).each(function(index) {
+    //             $content += '<div class="limitedIcon">' + this.title + '</div>';
+    //             $content += '<div class="limitedBody"><div class="master">' + this.title + '</div>';
+    //             $content += '<div class="detail"><p>' + this.detail + '</p></div></div>';
+    //             $content += '<div class="limitedBorder"><button class="selectButton" name="plan" id="' + this.title + '">Select</button></div>';
+    //         });
+    //         $('#container').html($content).addClass('limitedFrame');
+    //             $('#navBar a').hide();
+    //         $("a[href='#plansScreen']").show();
+    //         $("a[href='#limitedCoverageScreen']").show();
+    //         location.hash = 'limitedCoverageScreen';
+    //         },
+    //         error : function(){
+    //             alert('Could not load content!');
+    //         }
+    //     })
+    // }
+
+    // //Function that loads comprehensive plan content
+
+    // function loadcomprehensive(){
+    //     $('#container').removeClass('detailsFrame');
+    //     $.ajax({url      : "comprehensive.txt",
+    //         dataType : "json",
+    //         success : function(data){
+    //             var $content = '<div class="compHeader">Comprehensive Coverage</div>';
+    //             $(data).each(function(index) {$content += '<div class="compIcon">' + this.title + '</div>';
+    //             $content += '<div class="compBody"><div class="master">' + this.title + '</div>';
+    //             $content += '<div class="detail"><p>' + this.detail + '</p></div></div>';
+    //             $content += '<div class="compBorder"><button class="selectButton" name="plan" id="' + this.title + '">Select</button></div>';
+    //         });
+    //         $('#container').html($content).addClass('compFrame');
+    //             $('#navBar a').hide();
+    //         $("a[href='#plansScreen']").show();
+    //         $("a[href='#comprehensiveCoverageScreen']").show();
+    //         location.hash = 'comprehensiveCoverageScreen';
+    //     },
+    //     error : function(){
+    //         alert('Could not load content!');
+    //     }
+    //     })
+    // }
+
+    // //Function to load personal page
+    // function loadpersonal() {
+    //     nameList = [];
+    //     index = 1;
+    //     $('#container').load('personalDetails.html', function () {
+    //     $(".datepicker").datepicker({
+    //         showOn: "button",
+    //         buttonImage: "calendar.gif",
+    //         buttonImageOnly: true,
+    //         buttonText: "Select date"
+    //     });
+    //     $('#container').addClass('detailsFrame');
+    //     $(".datepicker").attr('readOnly', 'true');
+    //         $('#navBar a').hide();
+    //         if (plan[0] == "Limited") {
+    //             $("a[href='#plansScreen']").show();
+    //             $("a[href='#limitedCoverageScreen']").show();
+    //         }
+    //         if (plan[0] == "Comprehensive"){
+    //             $("a[href='#plansScreen']").show();
+    //             $("a[href='#comprehensiveCoverageScreen']").show();
+    //         }
+    //     $("a[href='#personalDetailsScreen']").show();
+    //     location.hash = 'personalDetailsScreen';
+    //     });
+    // }
+
+    // //Function to validate the user input
+
+    // function validate() {
+    //     var flag = 0;
+    //     var nameinput = $(".details").find('#name').val();
+    //     var addressinput = $(".details").find('#address1').val();
+    //     var startinput = $(".details").find('#startdate').val();
+    //     var endinput = $(".details").find('#enddate').val();
+    //     if (nameinput == "") {
+    //         flag = 1;
+    //         $(".details").find('.nameError').html(" This is a required field");
+    //     }
+    //     else {
+    //         $(".details").find('.nameError').html("");
+    //         nameList[index] = nameinput.split(" ")[0];
+    //     }
+    //     if (addressinput == "") {
+    //         flag = 1;
+    //         $(".details").find('.addressError').html(" This is a required field");
+    //     }
+    //     else {
+    //         $(".details").find('.addressError').html("");
+    //     }
+    //     if (startinput == "") {
+    //         flag = 1;
+    //         $(".details").find('.startdateError').html(" This is a required field");
+    //     }
+    //     else {
+    //         $(".details").find('.startdateError').html("");
+    //     }
+    //     if (endinput == "") {
+    //         flag = 1;
+    //         $(".details").find('.enddateError').html(" This is a required field");
+    //     }
+    //     else {
+    //         $(".details").find('.enddateError').html("");
+    //     }
+    //     return flag;
+    // }
+
+    // //Function to add a new personal details form
+    // function addForm(flag) {
+    //     if (flag == 0) {
+    //         if (index < maxnumber) {
+    //             index++;
+    //             $('.detailsHeader').html('Insured#' + index);
+    //             $(".details").find('#name').val("");
+    //             $(".details").find('#address1').val("");
+    //             $(".details").find('#address2').val("");
+    //             $(".details").find('.nameError').html("");
+    //             $(".details").find('.addressError').html("");
+    //             $(".details").find('.startdateError').html("");
+    //             $(".details").find('.enddateError').html("");
+    //         }
+    //         else {
+    //             alert("You have reached the maximum number of persons that can be added. ")
+    //         }
+    //     }
+    // }
+
+    // //Function to display Thank you page
+
+    // function loadconfirmation(){
+    //     var returnflag = validate();
+    //     if (returnflag == 0) {
+    //         $("a[href='#confirmationScreen']").show();
+    //         location.hash = "confirmationScreen";
+    //         var $content = '<div class="header">Thank you</div>';
+    //         $content += '<div class="contentBody"><p>Thank you ' + nameList[1] + ' for chosing the ' + planName + ' with us</p>';
+    //         if (nameList.length > 2) {
+    //             $content += '<p>Below are the names of all the insured persons :</p>';
+    //             for (i = 2; i < nameList.length; i++) {
+    //                 $content += '<li>' + nameList[i] + '</li>';
+    //             }
+    //         }
+    //     $content += '</div>'
+    //     $('#container').html($content).addClass('frame');
+    //     }
+    // }
+
+</script>
+</html>

@@ -1,0 +1,10 @@
+[
+{
+    "title"   : "Limited Plan A",
+    "detail"  : "Limited Plan A provides basic medical coverage for non-U.S citizens, who come to the U.S for business, pleasure, to study, or to immigrate with a maximum coverage of $120,000."
+},
+{
+    "title" : "Limited Plan B",
+    "detail" : "Limited Plan B provides basic medical coverage for non-U.S citizens, who come to the U.S for business, pleasure, to study, or to immigrate with a maximum coverage of $140,000."
+}
+]

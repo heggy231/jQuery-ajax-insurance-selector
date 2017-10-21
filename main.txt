@@ -1,0 +1,12 @@
+[
+  {
+	 "title":"Limited Coverage",
+     "detail":"Limited coverage plan provides the basic protection, and may not be adequate.It may cost you less, but the coverage is limited to pre defined clause of fixed amount of charges.Must read policy deails for benefit and coverage details.",
+     "value":"limited"
+  },
+  {
+    "title":"Comprehensive Coverage",
+    "detail":"These plans offer much better and flexible coverage.Most of these plans work like PPO types of 80-20% plan. Means insured have to pay 20% of the cost for the first $5,000 per policy period policy pays rest 80%.",
+    "value":"comp"
+  }
+]
